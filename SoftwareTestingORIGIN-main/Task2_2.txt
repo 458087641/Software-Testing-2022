@@ -1,0 +1,8 @@
+After adding tests in 2_2, there are 4 branches remain uncovered.
+1st branch is line 45 in file Option.java" method "equals", getClass() != obj.getClass()", as in the line 43, parameter obj is convert to Option class, if the object obj is not an Option object, the methon will throw exception and stop running, line 45 can not be reached. If the cast is succeed, then line 45 could only be true. In this case, the line 45 can not be false. So this brance remain uncovered. 
+
+2nd branch is "switch (type)" at line 41 in file parser.java, method "getInteger()", because in line 38 and 39, it use getType() so the option name should match a exist option, a exist option can not have a Type other than STRING INTEGER BOOLEAN and CHARACTER, so the default branch can not be reached. 
+
+3rd branch is line "if (optionMap.optionExists(varNameNoDash)) " at line 96 in file Parser.java, as at line 92 it called getString(), so the input option name should match a exist option in optionmap, if the option does not exist, the method throw exception and terminate, the line 96 can not be reached, if option exist, the line 96 could only be true. Thus, there will be one branch missed. 
+
+4th branch is line "if (optionMap.shortcutExists(varNameNoDash))" at line 96 in file Parser.java, the reason it miss one branch is same as 3rn one. 

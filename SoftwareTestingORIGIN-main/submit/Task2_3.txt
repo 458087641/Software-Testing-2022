@@ -1,0 +1,3 @@
+I Obtain my solution by using a greedy heuristic. In general, I check every single tests in the suit, find out how many branches it will cover if it is inclued in the suit. After all tests is evaluated, I choose to remove all test that do not bring any increase to the covearge(i.e. remove these tests will not result an decrease in coverage), leave tests do contribute to increase the covearge. 
+
+This way is definatly effictive, as it clear all necessory tests, also, mark the importance of each remaining tests, if the resource is still not enough, test suit can still be minised by delating tests that bring least contribution to coverage. Maximize coverage with minimum number of test cases.
